@@ -68,7 +68,8 @@ void experiment1(int N)
 		// left side and right side is connected!
 		// grid.print();
 
-		// print p and size of 'giant component' 
+		// print p for Experiment 1 
+		// and size of 'giant component' for Experiment 3
 		printf("%d %d\n", p, grid.size(index));
 		return;
 	}
