@@ -20,30 +20,34 @@ int main(int argc, char *argv[])
 	printf("%d\n", N);
 
 	// experiment 2
-	for (int trial = 0; trial < n_trials; trial++)
-		experiment2(N);
+	vector<double> average;
+	for (int p = 0; p < N * N; p++)
+		average.push_back(0.0);
+
+	for (int count = 0; count < n_trials; count++)
+	{
+		Grid grid(N);
+		vector<int> random_sequence = generateRandomSequence(N * N);
+
+		int largest_component_size = 1;
+
+		// increasing p
+		for (int p = 0; p < N * N; p++)
+		{
+			// pick next random sequence
+			int index = random_sequence[p];
+			grid.mark(index);
+
+			int new_component_size = grid.size(index);
+			if (new_component_size > largest_component_size)
+				largest_component_size = new_component_size;
+
+			average[p] = double(average[p] * count + largest_component_size) / (count + 1);
+		}
+	}
+
+	for (int p = 0; p < N * N; p++)
+		printf("%d %lf\n", p, average[p]);
 
 	return 0;
-}
-
-void experiment2(int N)
-{
-	Grid grid(N);
-	vector<int> random_sequence = generateRandomSequence(N * N);
-
-	int largest_component_size = 1;
-
-	// increasing p
-	for (int p = 0; p < random_sequence.size(); p++)
-	{
-		// pick next random sequence
-		int index = random_sequence[p];
-		grid.mark(index);
-
-		int new_component_size = grid.size(index);
-		if (new_component_size > largest_component_size)
-			largest_component_size = new_component_size;
-
-		printf("%d %d\n", p, largest_component_size);
-	}
 }
