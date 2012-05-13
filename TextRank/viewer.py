@@ -54,6 +54,7 @@ class MyFrame(wx.Frame):
 		self.eng = wx.Button(panel, -1, "English".decode("utf-8", 'replace').encode("cp949","replace"), pos=(56, 57), size=(63,22))
 		self.kor = wx.Button(panel, -1, "Korean".decode("utf-8", 'replace').encode("cp949","replace"), pos=(124, 57), size=(63,22))
 		self.log = wx.Button(panel, -1, "Log".decode("utf-8", 'replace').encode("cp949","replace"), pos=(192, 57), size=(63,22))
+		self.graph = wx.Button(panel, -1, "Graph", pos=(260, 57), size=(63,22))
 				
 		wx.StaticText(panel, -1, "Title", pos=(8, 90), size=(40,20))
 		self.p_title = wx.TextCtrl(panel, -1, "", pos=(56, 87), size=(929,22))
@@ -80,6 +81,7 @@ class MyFrame(wx.Frame):
 		self.Bind(wx.EVT_BUTTON, self.OnEng, self.eng)
 		self.Bind(wx.EVT_BUTTON, self.OnKor, self.kor)
 		self.Bind(wx.EVT_BUTTON, self.OnLog, self.log)
+		self.Bind(wx.EVT_BUTTON, self.OnGraph, self.graph)
 		
 		self.Bind(wx.EVT_BUTTON, self.OnTag_Update, self.tag_update)
 		
@@ -132,12 +134,12 @@ class MyFrame(wx.Frame):
 		self.Update()	
 
 	def OnTag_Update(self, event):
-		th=threading.Thread(target=self.Tag_make)
-		th.start()
-		
-	def Tag_make(self):
 		textrank.run(self.num)
 		self.Update()
+		
+	def OnGraph(self, event):
+		textrank.run(self.num, show_graph=True)
+		self.Update()	
 
 	def Update(self):
 		path = "data/%04d/" % self.num
