@@ -6,6 +6,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 import plural
+from determine_category import determine_category
 
 def pagerank(graph, damping_factor=0.85, max_iterations=100, min_delta=0.00001):
 	nodes = graph.nodes()
@@ -155,7 +156,7 @@ def do_show_graph(selected_result, graph):
 	
 	nx.draw(G, width=0.05, node_size=0, adjust_size=adjust_size)
 	plt.show()
-	
+
 def run(index, show_graph=False):
 	print "\nIndex " + str(index)
 
@@ -177,10 +178,15 @@ def run(index, show_graph=False):
 	selected_result = select_result(result)
 	
 	log = "\n".join([item[0][0] + ", " + item[0][1] + " : " + str(item[1]) for item in result])
-	tags = ", ".join([item[0][0] for item in selected_result])
+	tags = [item[0][0] for item in selected_result]
 
 	#print log
-	print tags
+	#print tags
+
+	tags_for_category = [item[0][0] for item in result[:10]]
+	category = determine_category(tags_for_category)
+	tags_string = '[' + category + '] ' + ", ".join(tags)
+	print tags_string
 
 	# show graph
 	if show_graph:
@@ -193,12 +199,12 @@ def run(index, show_graph=False):
 
 	# write tags
 	output = open(dirname + "/tags.txt", 'w')
-	output.write(tags)
+	output.write(tags_string)
 	output.close()
 
 if __name__ == '__main__':
-	#run(798)
+	#run(0)
 	#run(798, show_graph=True)
 
-	for index in range(0, 1000):
+	for index in range(901, 1000):
 		run(index)

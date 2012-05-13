@@ -65,6 +65,20 @@ def run(index):
 	output.write(url_en)
 	output.close()
 
+	# parse article category
+	navItems = dom.xpath("//li[contains(@class, 'navItem-selected')]/a")
+	if len(navItems) > 0:
+		category = navItems[0].text
+	else:
+		category = u'None'
+
+	print category.encode('utf-8')
+
+	# write category.txt
+	output = codecs.open(dir_name + "/category.txt", 'w', 'utf-8')
+	output.write(category)
+	output.close()
+
 #run(0)
 
 for index in range(0, 1000):
@@ -75,4 +89,3 @@ for index in range(0, 1000):
 			run(index)
 		except Exception:
 			print "----- Failed"
-
