@@ -6,5 +6,6 @@ Personal repository for pratice, for algorithm pratices and framework test codes
 - [Code Kata](http://codekata.pragprog.com/) : Some peaces of programming problems, how to become better developer
 - [SICP](http://mitpress.mit.edu/sicp/full-text/book/book.html) : " The magician book "
 - [NLTK](http://www.nltk.org/) : Python toolkit for natual language processing.
+- OpenGL ES : OpenGL ES Test code in iPhone. I'm working for wonderful thing. 
 
-- And test many interesting frameworks, for work but sometimes just for fun. 
+- And test many interesting frameworks for work, sometimes just for fun. 
