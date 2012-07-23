@@ -8,6 +8,23 @@
 
 #import "GLView.h"
 
+#import <OpenGLES/EAGL.h>
+#import <QuartzCore/QuartzCore.h>
+#import <OpenGLES/ES1/gl.h>
+#import <OpenGLES/ES1/glext.h>
+
+#import "IRenderingEngine.h"
+
+@interface GLView () {
+	EAGLContext *_context;
+	IRenderingEngine *_renderingEngine;
+	float _timestamp;
+}
+
+- (void)drawView:(CADisplayLink *)displayLink;
+
+@end
+
 @implementation GLView
 
 + (Class)layerClass
@@ -29,22 +46,18 @@
 			return nil;
 		}
 		
-		GLuint frameBuffer, renderBuffer;
-		glGenFramebuffersOES(1, &frameBuffer);
-		glGenRenderbuffersOES(1, &renderBuffer);
-		
-		glBindFramebufferOES(GL_FRAMEBUFFER_OES, frameBuffer);
-		glBindRenderbufferOES(GL_RENDERBUFFER_OES, renderBuffer);
+		_renderingEngine = createRenderer1();
 		
 		[_context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:eaglLayer];
 		
-		glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, 
-									 GL_RENDERBUFFER_OES, renderBuffer);
+		_renderingEngine->initialize(CGRectGetWidth(frame), CGRectGetHeight(frame));
 		
-		glViewport(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
+		[self drawView:nil];
+		_timestamp = CACurrentMediaTime();
 		
-		[self drawView];
-    }
+		CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawView:)];
+		[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+	}
     return self;
 }
 
@@ -58,11 +71,15 @@
 	[super dealloc];
 }
 
-- (void)drawView
+- (void)drawView:(CADisplayLink *)displayLink
 {
-	glClearColor(0.5f, 0.5f, 0.5f, 1);
-	glClear(GL_COLOR_BUFFER_BIT);
+	if (displayLink != nil) {
+		float elaspedSeconds = displayLink.timestamp - _timestamp;
+		_timestamp = displayLink.timestamp;
+		_renderingEngine->updateAnimation(elaspedSeconds);
+	}
 	
+	_renderingEngine->render();
 	[_context presentRenderbuffer:GL_RENDERBUFFER_OES];
 }
 

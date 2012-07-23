@@ -7,17 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <OpenGLES/EAGL.h>
-#import <QuartzCore/QuartzCore.h>
-#import <OpenGLES/ES1/gl.h>
-#import <OpenGLES/ES1/glext.h>
 
-class IRenderingEngine;
-
-@interface GLView : UIView {
-	EAGLContext *_context;
-}
-
-- (void)drawView;
-
+@interface GLView : UIView 
 @end

@@ -13,8 +13,10 @@
 		06DDB27715BC569C00EC8690 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DDB27515BC569C00EC8690 /* InfoPlist.strings */; };
 		06DDB27915BC569C00EC8690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB27815BC569C00EC8690 /* main.m */; };
 		06DDB27D15BC569C00EC8690 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB27C15BC569C00EC8690 /* AppDelegate.m */; };
-		06DDB28015BC569C00EC8690 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB27F15BC569C00EC8690 /* ViewController.m */; };
-		06DDB28315BC569C00EC8690 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06DDB28115BC569C00EC8690 /* ViewController.xib */; };
+		06DDB28B15BC56CA00EC8690 /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB28A15BC56CA00EC8690 /* GLView.mm */; };
+		06DDB28E15BC587A00EC8690 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DDB28D15BC587A00EC8690 /* QuartzCore.framework */; };
+		06DDB29015BC587E00EC8690 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DDB28F15BC587E00EC8690 /* OpenGLES.framework */; };
+		06DDB29215BC5F6100EC8690 /* RenderingEngine1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB29115BC5F6000EC8690 /* RenderingEngine1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +24,18 @@
 		06DDB26C15BC569C00EC8690 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06DDB26E15BC569C00EC8690 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		06DDB27015BC569C00EC8690 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		06DDB27415BC569C00EC8690 /* OpenGL_ES-Info.plist */ = {isa = PBXFileReference; path = "OpenGL_ES-Info.plist"; sourceTree = "<group>"; };
+		06DDB27415BC569C00EC8690 /* OpenGL_ES-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenGL_ES-Info.plist"; sourceTree = "<group>"; };
 		06DDB27615BC569C00EC8690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		06DDB27815BC569C00EC8690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		06DDB27A15BC569C00EC8690 /* OpenGL_ES-Prefix.pch */ = {isa = PBXFileReference; path = "OpenGL_ES-Prefix.pch"; sourceTree = "<group>"; };
-		06DDB27B15BC569C00EC8690 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		06DDB27A15BC569C00EC8690 /* OpenGL_ES-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenGL_ES-Prefix.pch"; sourceTree = "<group>"; };
+		06DDB27B15BC569C00EC8690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06DDB27C15BC569C00EC8690 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		06DDB27E15BC569C00EC8690 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		06DDB27F15BC569C00EC8690 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		06DDB28215BC569C00EC8690 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		06DDB28915BC56CA00EC8690 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		06DDB28A15BC56CA00EC8690 /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = "<group>"; };
+		06DDB28C15BC57C300EC8690 /* IRenderingEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRenderingEngine.h; sourceTree = "<group>"; };
+		06DDB28D15BC587A00EC8690 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		06DDB28F15BC587E00EC8690 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		06DDB29115BC5F6000EC8690 /* RenderingEngine1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine1.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DDB29015BC587E00EC8690 /* OpenGLES.framework in Frameworks */,
+				06DDB28E15BC587A00EC8690 /* QuartzCore.framework in Frameworks */,
 				06DDB26D15BC569C00EC8690 /* UIKit.framework in Frameworks */,
 				06DDB26F15BC569C00EC8690 /* Foundation.framework in Frameworks */,
 				06DDB27115BC569C00EC8690 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +74,8 @@
 		06DDB26B15BC569C00EC8690 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06DDB28F15BC587E00EC8690 /* OpenGLES.framework */,
+				06DDB28D15BC587A00EC8690 /* QuartzCore.framework */,
 				06DDB26C15BC569C00EC8690 /* UIKit.framework */,
 				06DDB26E15BC569C00EC8690 /* Foundation.framework */,
 				06DDB27015BC569C00EC8690 /* CoreGraphics.framework */,
@@ -79,9 +88,10 @@
 			children = (
 				06DDB27B15BC569C00EC8690 /* AppDelegate.h */,
 				06DDB27C15BC569C00EC8690 /* AppDelegate.m */,
-				06DDB27E15BC569C00EC8690 /* ViewController.h */,
-				06DDB27F15BC569C00EC8690 /* ViewController.m */,
-				06DDB28115BC569C00EC8690 /* ViewController.xib */,
+				06DDB28915BC56CA00EC8690 /* GLView.h */,
+				06DDB28A15BC56CA00EC8690 /* GLView.mm */,
+				06DDB28C15BC57C300EC8690 /* IRenderingEngine.h */,
+				06DDB29115BC5F6000EC8690 /* RenderingEngine1.cpp */,
 				06DDB27315BC569C00EC8690 /* Supporting Files */,
 			);
 			path = OpenGL_ES;
@@ -150,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06DDB27715BC569C00EC8690 /* InfoPlist.strings in Resources */,
-				06DDB28315BC569C00EC8690 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +172,8 @@
 			files = (
 				06DDB27915BC569C00EC8690 /* main.m in Sources */,
 				06DDB27D15BC569C00EC8690 /* AppDelegate.m in Sources */,
-				06DDB28015BC569C00EC8690 /* ViewController.m in Sources */,
+				06DDB28B15BC56CA00EC8690 /* GLView.mm in Sources */,
+				06DDB29215BC5F6100EC8690 /* RenderingEngine1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,14 +186,6 @@
 				06DDB27615BC569C00EC8690 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		06DDB28115BC569C00EC8690 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06DDB28215BC569C00EC8690 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,0 +1,368 @@
+TOpenGL_ES
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/Info.plist OpenGL_ES/OpenGL_ES-Info.plist
+cProcessPCH++ /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH++ /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES normal i386
+cGenerateDSYMFile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app.dSYM /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES
+cCopyStringsFile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/en.lproj/InfoPlist.strings OpenGL_ES/en.lproj/InfoPlist.strings
+cTouch /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk
+c000000004F70BE9C0000000000000110
+t1332788892
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004F5891BA0000000000244490
+t1331204538
+s2376848
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004F5891BD0000000000353830
+t1331204541
+s3487792
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c000000004F5891C4000000000001D2E0
+t1331204548
+s119520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004F5891C500000000001AB190
+t1331204549
+s1749392
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004F5891C70000000000905E40
+t1331204551
+s9461312
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.h
+c00000000500C25D50000000000000146
+t1342973397
+s326
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.m
+c00000000500C282000000000000002F7
+t1342973984
+s759
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.h
+c00000000500C261400000000000000C4
+t1342973460
+s196
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.hpp
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm
+c00000000500C2A590000000000000751
+t1342974553
+s1873
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/IRenderingEngine.h
+c00000000500C2C6C00000000000001DF
+t1342975084
+s479
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Prefix.pch
+c00000000500C1F1C000000000000013B
+t1342971676
+s315
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cpp
+c00000000500C2C3A00000000000007FA
+t1342975034
+s2042
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/ViewController.m
+c00000000500C1F1C000000000000028D
+t1342971676
+s653
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/en.lproj/InfoPlist.strings
+c00000000500C1F1C000000000000002D
+t1342971676
+s45
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/en.lproj/ViewController.xib
+c00000000500C1F1C000000000000146B
+t1342971676
+s5227
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m
+c00000000500C1F1C000000000000014E
+t1342971676
+s334
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app
+t1342975071
+s204
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app.dSYM
+t1342975071
+s102
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/Info.plist
+t1342971879
+s832
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES
+t1342975071
+s25956
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/PkgInfo
+t1342971879
+s8
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/en.lproj/InfoPlist.strings
+t1342971849
+s42
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/en.lproj/ViewController.nib
+t2
+s0
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.o
+t1342974164
+s59736
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o
+t1342975071
+s51772
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/OpenGL_ES.LinkFileList
+c00000000500C28D30000000000000215
+t1342974163
+s533
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.o
+t1342975071
+s12024
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/ViewController.o
+t2
+s0
+
+N/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.o
+t1342973399
+s3068
+
+N/var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.pth
+t1342973370
+s4801340
+
+N/var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.pth
+t1342971848
+s4021276
+
+N/var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.pth
+t1342974164
+s93096
+
+NOpenGL_ES/OpenGL_ES-Info.plist
+c00000000500C1FE600000000000004BC
+t1342971878
+s1212
+
+CBuild AST from /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.m
+r0
+
+CBuild AST from /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.m
+r0
+
+CBuild AST from /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm
+r0
+
+CBuild AST from /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cpp
+r0
+
+CBuild AST from /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/ViewController.m
+r0
+
+CBuild AST from /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesfda432ed63bcb541^388333ed63bcb541^---0#1#0#--18"Check dependencies36"BADD2398-095B-446F-BE6E-FD4A75218BA7-
+
+CCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s364666964.080442
+e364666964.265730
+r1
+xCompileC
+xbuild/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.o
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.mb6be145460bcb541^1a19445460bcb541^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.m0000000000000000^3306"CompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.o OpenGL_ES/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator -include /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch -MMD -MT dependencies -MF /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/AppDelegate.m -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/AppDelegate.o36"574981A1-B8FE-45AB-AAAF-8E51BFBEA5D6-
+
+CCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s364665698.901344
+e364665699.080075
+r1
+xCompileC
+xbuild/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Compile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.m1de7e6625bbcb541^f38d14635bbcb541^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.m0000000000000000^3276"CompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o OpenGL_ES/GLView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator -include /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch -MMD -MT dependencies -MF /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.d --serialize-diagnostics /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.m -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o36"ECEF37F3-8960-4020-9951-56578039D884-
+
+CCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s364667885.232901
+e364667885.799093
+r1
+xCompileC
+xbuild/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm2ec73bed63bcb541^a29ccced63bcb541^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm0000000000000000^3408"CompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o OpenGL_ES/GLView.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-arc-abi -Wc++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -g -fvisibility-inlines-hidden -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator -include /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch -MMD -MT dependencies -MF /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.d --serialize-diagnostics /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/GLView.mm -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/GLView.o36"C6736A35-8A37-4E9F-90C5-C81DBE386422-
+
+CCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s364667885.235923
+e364667885.395545
+r1
+xCompileC
+xbuild/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.o
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cppbe863ced63bcb541^8a566aed63bcb541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cpp0000000000000000^3089"CompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.o OpenGL_ES/RenderingEngine1.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -g -fvisibility-inlines-hidden -Wno-conversion -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator -include /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch -MMD -MT dependencies -MF /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.d --serialize-diagnostics /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/RenderingEngine1.cpp -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/RenderingEngine1.o36"E637F8FC-2B0F-4E80-9E35-B99959DE2721-
+
+CCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/ViewController.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s364666199.033899
+e364666199.219057
+r1
+xCompileC
+xbuild/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.o
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m06d708575dbcb541^0d3639575dbcb541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m0000000000000000^3264"CompileC build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.o OpenGL_ES/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator -include /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch -MMD -MT dependencies -MF /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/main.m -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/main.o36"9A8C2F76-F642-434E-A1B7-48D7FBD8AAAF-
+
+CCompileXIB /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/en.lproj/ViewController.xib
+r0
+
+CCopyStringsFile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/en.lproj/InfoPlist.strings OpenGL_ES/en.lproj/InfoPlist.strings
+s364664649.068934
+e364664649.086023
+r1
+xCopyStringsFile
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/en.lproj/InfoPlist.strings
+xOpenGL_ES/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy OpenGL_ES/en.lproj/InfoPlist.strings2afd144957bcb541^ff05164957bcb541^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/en.lproj/InfoPlist.strings0000000000000000^587"CopyStringsFile build/Debug-iphonesimulator/OpenGL_ES.app/en.lproj/InfoPlist.strings OpenGL_ES/en.lproj/InfoPlist.strings    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/en.lproj -- OpenGL_ES/en.lproj/InfoPlist.strings36"79C1FC52-8C58-465C-8971-AF47D554AE42-
+
+CGenerateDSYMFile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app.dSYM /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES
+s364667885.874767
+e364667885.915841
+r1
+xGenerateDSYMFile
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app.dSYM
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Generating /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app.dSYMb405e0ed63bcb541^4086eaed63bcb541^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app.dSYM/0000000000000000^652"GenerateDSYMFile build/Debug-iphonesimulator/OpenGL_ES.app.dSYM build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/dsymutil /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app.dSYM36"E6A672E7-19ED-440D-88A3-0E771B1E5E9D-
+
+CLd /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES normal i386
+s364667885.806197
+e364667885.866892
+r1
+xLd
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Link /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES5b7cceed63bcb541^4df8dded63bcb541^---0#0#0#--1218"Ld build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES normal i386    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -L/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator -filelist /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/Objects-normal/i386/OpenGL_ES.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -framework OpenGLES -framework QuartzCore -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/OpenGL_ES36"C92F3207-FD1C-49A8-BFE1-6ED2E42D1D70-
+
+CProcessInfoPlistFile /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/Info.plist OpenGL_ES/OpenGL_ES-Info.plist
+s364664679.266269
+e364664679.271148
+r1
+xProcessInfoPlistFile
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/Info.plist
+xOpenGL_ES/OpenGL_ES-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process OpenGL_ES/OpenGL_ES-Info.plist6a4c446757bcb541^a378456757bcb541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Info.plist0000000000000000^670"ProcessInfoPlistFile build/Debug-iphonesimulator/OpenGL_ES.app/Info.plist OpenGL_ES/OpenGL_ES-Info.plist    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility OpenGL_ES/OpenGL_ES-Info.plist -genpkginfo /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app/Info.plist36"522583BC-0251-405A-B9D2-77791715E17F-
+
+CProcessPCH /Users/khkim/Library/Developer/Xcode/DerivedData/OpenGL_ES-dvaqpjoeswwfhlftpbcsmizpyapt/Index/PrecompiledHeaders/OpenGL_ES-Prefix-gfswwgrwsdougualfmvdqedsnikk_ast/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s364664647.209205
+e364664648.421151
+r1
+xProcessPCH
+x/var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.pth
+xOpenGL_ES/OpenGL_ES-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile OpenGL_ES/OpenGL_ES-Prefix.pchf8c5354757bcb541^36e46b4857bcb541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Prefix.pch0000000000000000^3316"ProcessPCH /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator --serialize-diagnostics /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Prefix.pch -o /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-ckdbjlqdoblrztcpyocrwsykvkho/OpenGL_ES-Prefix.pch.d36"58D02D0D-68EA-4199-B81F-2FC7BC329F61-
+
+CProcessPCH++ /Users/khkim/Library/Developer/Xcode/DerivedData/OpenGL_ES-dvaqpjoeswwfhlftpbcsmizpyapt/Index/PrecompiledHeaders/OpenGL_ES-Prefix-ddqteoglvuavsacaabbgspcznyfa_ast/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /Users/khkim/Library/Developer/Xcode/DerivedData/OpenGL_ES-dvaqpjoeswwfhlftpbcsmizpyapt/Index/PrecompiledHeaders/OpenGL_ES-Prefix-gwcgmoqgvwtcvfebsglvjqosohft_ast/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s364666169.424862
+e364666170.450138
+r1
+xProcessPCH++
+x/var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.pth
+xOpenGL_ES/OpenGL_ES-Prefix.pch
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile OpenGL_ES/OpenGL_ES-Prefix.pchd5ed6c395dbcb541^be68733a5dbcb541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Prefix.pch0000000000000000^3448"ProcessPCH++ /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-arc-abi -Wc++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -g -fvisibility-inlines-hidden -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator --serialize-diagnostics /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Prefix.pch -o /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-aiucljaxdurzeeazeocsuwzcfane/OpenGL_ES-Prefix.pch.d36"D97664A1-E15D-4ABE-94BE-B50A2D86180F-
+
+CProcessPCH++ /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s364666964.073413
+e364666964.132508
+r1
+xProcessPCH++
+x/var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.pth
+xOpenGL_ES/OpenGL_ES-Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile OpenGL_ES/OpenGL_ES-Prefix.pchd8f2125460bcb541^a9fa215460bcb541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Prefix.pch0000000000000000^3067"ProcessPCH++ /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.pth OpenGL_ES/OpenGL_ES-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -g -fvisibility-inlines-hidden -Wno-conversion -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-generated-files.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-own-target-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-all-target-headers.hmap -iquote /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/OpenGL_ES-project-headers.hmap -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/include -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources/i386 -I/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/OpenGL_ES.build/Debug-iphonesimulator/OpenGL_ES.build/DerivedSources -F/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator --serialize-diagnostics /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.dia -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/OpenGL_ES/OpenGL_ES-Prefix.pch -o /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/h9/rcxdcczx19j0vynrkq7wxq8r0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/OpenGL_ES-Prefix-dehatsiirbypyscikkcwhruhvvwu/OpenGL_ES-Prefix.pch.d36"E72F55FF-73E7-434E-82CB-C6C0F19CB174-
+
+CTouch /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app
+s364667885.945768
+e364667885.953889
+r1
+xTouch
+x/Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Touch /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app4430f2ed63bcb541^aebcf4ed63bcb541^---0#0#0#--396"Touch build/Debug-iphonesimulator/OpenGL_ES.app    cd /Users/khkim/Dropbox/DailyCode/OpenGL_ES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/khkim/Dropbox/DailyCode/OpenGL_ES/build/Debug-iphonesimulator/OpenGL_ES.app36"AE533DB4-CB38-4E27-9F8E-8E80F31C0D6C-
+
