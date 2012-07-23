@@ -15,6 +15,8 @@
 
 #import "IRenderingEngine.h"
 
+const bool ForceES1 = NO;
+
 @interface GLView () {
 	EAGLContext *_context;
 	IRenderingEngine *_renderingEngine;
@@ -40,14 +42,28 @@
 		CAEAGLLayer *eaglLayer = (CAEAGLLayer *)super.layer;
 		eaglLayer.opaque = YES;
 		
-		_context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+		EAGLRenderingAPI api = kEAGLRenderingAPIOpenGLES2;
+		_context = [[EAGLContext alloc] initWithAPI:api];
+		
+		// Try OpenGL ES 1.1
+		if (nil == _context || ForceES1) {
+			api = kEAGLRenderingAPIOpenGLES1;
+			_context = [[EAGLContext alloc] initWithAPI:api];
+		}
 		
 		if (nil == _context || false == [EAGLContext setCurrentContext:_context]) {
 			[self release];
 			return nil;
 		}
-		
-		_renderingEngine = createRenderer1();
+
+		if (api == kEAGLRenderingAPIOpenGLES2) {
+			NSLog(@"Using OpenGL ES 2.0");
+			_renderingEngine = createRenderer2();
+		}
+		else {
+			NSLog(@"Using OpenGL ES 1.1");
+			_renderingEngine = createRenderer1();
+		}
 		
 		[_context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:eaglLayer];
 		

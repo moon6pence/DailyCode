@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06D82BC515BDB1BC00DC3FF2 /* Simple.vert in Sources */ = {isa = PBXBuildFile; fileRef = 06D82BC415BDB1BC00DC3FF2 /* Simple.vert */; };
+		06D82BC815BDB1CE00DC3FF2 /* Simple.frag in Sources */ = {isa = PBXBuildFile; fileRef = 06D82BC715BDB1CE00DC3FF2 /* Simple.frag */; };
+		06D82BCA15BDB37800DC3FF2 /* RenderingEngine2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06D82BC915BDB37800DC3FF2 /* RenderingEngine2.cpp */; };
 		06DDB26D15BC569C00EC8690 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DDB26C15BC569C00EC8690 /* UIKit.framework */; };
 		06DDB26F15BC569C00EC8690 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DDB26E15BC569C00EC8690 /* Foundation.framework */; };
 		06DDB27115BC569C00EC8690 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DDB27015BC569C00EC8690 /* CoreGraphics.framework */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06D82BC415BDB1BC00DC3FF2 /* Simple.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Simple.vert; sourceTree = "<group>"; };
+		06D82BC715BDB1CE00DC3FF2 /* Simple.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Simple.frag; sourceTree = "<group>"; };
+		06D82BC915BDB37800DC3FF2 /* RenderingEngine2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine2.cpp; sourceTree = "<group>"; };
 		06DDB26815BC569C00EC8690 /* OpenGL_ES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGL_ES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06DDB26C15BC569C00EC8690 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06DDB26E15BC569C00EC8690 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,7 +98,10 @@
 				06DDB28A15BC56CA00EC8690 /* GLView.mm */,
 				06DDB28C15BC57C300EC8690 /* IRenderingEngine.h */,
 				06DDB29115BC5F6000EC8690 /* RenderingEngine1.cpp */,
+				06D82BC915BDB37800DC3FF2 /* RenderingEngine2.cpp */,
 				06DDB27315BC569C00EC8690 /* Supporting Files */,
+				06D82BC415BDB1BC00DC3FF2 /* Simple.vert */,
+				06D82BC715BDB1CE00DC3FF2 /* Simple.frag */,
 			);
 			path = OpenGL_ES;
 			sourceTree = "<group>";
@@ -174,6 +183,9 @@
 				06DDB27D15BC569C00EC8690 /* AppDelegate.m in Sources */,
 				06DDB28B15BC56CA00EC8690 /* GLView.mm in Sources */,
 				06DDB29215BC5F6100EC8690 /* RenderingEngine1.cpp in Sources */,
+				06D82BC515BDB1BC00DC3FF2 /* Simple.vert in Sources */,
+				06D82BC815BDB1CE00DC3FF2 /* Simple.frag in Sources */,
+				06D82BCA15BDB37800DC3FF2 /* RenderingEngine2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +287,7 @@
 				06DDB28815BC569C00EC8690 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

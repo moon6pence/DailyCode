@@ -21,6 +21,7 @@ enum DeviceOrientation
 };
 
 struct IRenderingEngine *createRenderer1();
+struct IRenderingEngine *createRenderer2();
 
 struct IRenderingEngine
 {
