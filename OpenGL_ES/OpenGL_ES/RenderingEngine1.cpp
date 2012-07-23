@@ -19,10 +19,13 @@ public:
 	void initialize(int width, int height);
 	void render() const;
 	void updateAnimation(float timeStep);
+	void onRotate(DeviceOrientation orientation);
 	
 private:
 	GLuint _frameBuffer;
 	GLuint _renderBuffer;
+	
+	float _currentAngle;
 };
 
 IRenderingEngine *createRenderer1()
@@ -73,6 +76,9 @@ void RenderingEngine1::render() const
 	glClearColor(0.5f, 0.5f, 0.5f, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 	
+	glPushMatrix();
+	glRotatef(_currentAngle, 0, 0, 1);
+	
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glEnableClientState(GL_COLOR_ARRAY);
 	
@@ -84,8 +90,41 @@ void RenderingEngine1::render() const
 	
 	glDisableClientState(GL_VERTEX_ARRAY);
 	glDisableClientState(GL_COLOR_ARRAY);
+	
+	glPopMatrix();
 }
 
 void RenderingEngine1::updateAnimation(float timestamp)
 {
+}
+
+void RenderingEngine1::onRotate(DeviceOrientation orientation)
+{
+	float angle = 0;
+	
+	switch (orientation) {
+		case DeviceOrientationPortrait:
+		case DeviceOrientationFaceUp:
+		case DeviceOrientationFaceDown:
+			angle = 0;
+			break;
+			
+		case DeviceOrientationLandscapeLeft:
+			angle = 270;
+			break;
+			
+		case DeviceOrientationPortraitUpsideDown:
+			angle = 180;
+			break;
+			
+		case DeviceOrientationLandscapeRight:
+			angle = 90;
+			break;
+			
+		default:
+			angle = 0;
+			break;
+	}
+	
+	_currentAngle = angle;
 }

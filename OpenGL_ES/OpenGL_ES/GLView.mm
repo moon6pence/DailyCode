@@ -22,6 +22,7 @@
 }
 
 - (void)drawView:(CADisplayLink *)displayLink;
+- (void)didRotate:(NSNotification *)notification;
 
 @end
 
@@ -57,7 +58,15 @@
 		
 		CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawView:)];
 		[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+		
+		[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self 
+												 selector:@selector(didRotate:) 
+													 name:UIDeviceOrientationDidChangeNotification 
+												   object:nil];
 	}
+	
     return self;
 }
 
@@ -81,6 +90,13 @@
 	
 	_renderingEngine->render();
 	[_context presentRenderbuffer:GL_RENDERBUFFER_OES];
+}
+
+- (void)didRotate:(NSNotification *)notification
+{
+	UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+	_renderingEngine->onRotate((DeviceOrientation)orientation);
+	[self drawView:nil];
 }
 
 @end
