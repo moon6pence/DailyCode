@@ -11,6 +11,8 @@
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
 
+static const float RevolutionsPerSecond = 1;
+
 class RenderingEngine1 : public IRenderingEngine
 {
 public:
@@ -22,10 +24,13 @@ public:
 	void onRotate(DeviceOrientation orientation);
 	
 private:
+	float rotationDirection() const;
+	
 	GLuint _frameBuffer;
 	GLuint _renderBuffer;
 	
 	float _currentAngle;
+	float _desiredAngle;
 };
 
 IRenderingEngine *createRenderer1()
@@ -69,6 +74,9 @@ void RenderingEngine1::initialize(int width, int height)
 	glOrthof(-maxX, +maxX, -maxY, +maxY, -1, 1);
 	
 	glMatrixMode(GL_MODELVIEW);
+	
+	onRotate(DeviceOrientationPortrait);
+	_currentAngle = _desiredAngle;
 }
 
 void RenderingEngine1::render() const
@@ -94,8 +102,21 @@ void RenderingEngine1::render() const
 	glPopMatrix();
 }
 
-void RenderingEngine1::updateAnimation(float timestamp)
+void RenderingEngine1::updateAnimation(float timeStep)
 {
+	float direction = rotationDirection();
+	if (direction == 0) return;
+	
+	float degrees = timeStep * 360 * RevolutionsPerSecond;
+	_currentAngle += degrees * direction;
+	
+	if (_currentAngle >= 360)
+		_currentAngle -= 360;
+	else if (_currentAngle < 0)
+		_currentAngle += 360;
+	
+	if (rotationDirection() != direction)
+		_currentAngle = _desiredAngle;
 }
 
 void RenderingEngine1::onRotate(DeviceOrientation orientation)
@@ -126,5 +147,14 @@ void RenderingEngine1::onRotate(DeviceOrientation orientation)
 			break;
 	}
 	
-	_currentAngle = angle;
+	_desiredAngle = angle;
+}
+
+float RenderingEngine1::rotationDirection() const
+{
+	float delta = _desiredAngle - _currentAngle;
+	if (delta == 0) return 0;
+	
+	bool counterclockwise = ((delta > 0 && delta <= 180) || (delta < -180));
+	return counterclockwise ? +1 : -1;
 }
