@@ -15,7 +15,7 @@
 
 #import "IRenderingEngine.h"
 
-const bool ForceES1 = YES;
+const bool ForceES1 = NO;
 
 @interface GLView () {
 	EAGLContext *_context;
