@@ -2,7 +2,8 @@
 #include "Matrix.hpp"
 
 template <typename T>
-struct QuaternionT {
+struct QuaternionT
+{
     T x;
     T y;
     T z;
@@ -11,22 +12,22 @@ struct QuaternionT {
     QuaternionT();
     QuaternionT(T x, T y, T z, T w);
     
-    QuaternionT<T> Slerp(T mu, const QuaternionT<T>& q) const;
-    QuaternionT<T> Rotated(const QuaternionT<T>& b) const;
-    QuaternionT<T> Scaled(T scale) const;
-    T Dot(const QuaternionT<T>& q) const;
-    Matrix3<T> ToMatrix() const;
-    Vector4<T> ToVector() const;
+    QuaternionT<T> slerp(T mu, const QuaternionT<T>& q) const;
+    QuaternionT<T> rotated(const QuaternionT<T>& b) const;
+    QuaternionT<T> scaled(T scale) const;
+    T dot(const QuaternionT<T>& q) const;
+    Matrix3<T> toMatrix() const;
+    Vector4<T> toVector() const;
     QuaternionT<T> operator-(const QuaternionT<T>& q) const;
     QuaternionT<T> operator+(const QuaternionT<T>& q) const;
     bool operator==(const QuaternionT<T>& q) const;
     bool operator!=(const QuaternionT<T>& q) const;
     
-    void Normalize();
-    void Rotate(const QuaternionT<T>& q);
+    void normalize();
+    void rotate(const QuaternionT<T>& q);
     
-    static QuaternionT<T> CreateFromVectors(const Vector3<T>& v0, const Vector3<T>& v1);
-    static QuaternionT<T> CreateFromAxisAngle(const Vector3<T>& axis, float radians);
+    static QuaternionT<T> createFromVectors(const Vector3<T>& v0, const Vector3<T>& v1);
+    static QuaternionT<T> createFromAxisAngle(const Vector3<T>& axis, float radians);
 };
 
 template <typename T>
@@ -41,14 +42,14 @@ inline QuaternionT<T>::QuaternionT(T x, T y, T z, T w) : x(x), y(y), z(z), w(w)
 
 // Ken Shoemake's famous method.
 template <typename T>
-inline QuaternionT<T> QuaternionT<T>::Slerp(T t, const QuaternionT<T>& v1) const
+inline QuaternionT<T> QuaternionT<T>::slerp(T t, const QuaternionT<T>& v1) const
 {
     const T epsilon = 0.0005f;
-    T dot = Dot(v1);
+    T dot = this->dot(v1);
     
     if (dot > 1 - epsilon) {
-        QuaternionT<T> result = v1 + (*this - v1).Scaled(t);
-        result.Normalize();
+        QuaternionT<T> result = v1 + (*this - v1).scaled(t);
+        result.normalize();
         return result;
     }
     
@@ -61,16 +62,16 @@ inline QuaternionT<T> QuaternionT<T>::Slerp(T t, const QuaternionT<T>& v1) const
     T theta0 = std::acos(dot);
     T theta = theta0 * t;
     
-    QuaternionT<T> v2 = (v1 - Scaled(dot));
-    v2.Normalize();
+    QuaternionT<T> v2 = (v1 - scaled(dot));
+    v2.normalize();
     
-    QuaternionT<T> q = Scaled(std::cos(theta)) + v2.Scaled(std::sin(theta));
-    q.Normalize();
+    QuaternionT<T> q = scaled(std::cos(theta)) + v2.scaled(std::sin(theta));
+    q.normalize();
     return q;
 }
 
 template <typename T>
-inline QuaternionT<T> QuaternionT<T>::Rotated(const QuaternionT<T>& b) const
+inline QuaternionT<T> QuaternionT<T>::rotated(const QuaternionT<T>& b) const
 {
     QuaternionT<T> q;
     q.w = w * b.w - x * b.x - y * b.y - z * b.z;
@@ -82,19 +83,19 @@ inline QuaternionT<T> QuaternionT<T>::Rotated(const QuaternionT<T>& b) const
 }
 
 template <typename T>
-inline QuaternionT<T> QuaternionT<T>::Scaled(T s) const
+inline QuaternionT<T> QuaternionT<T>::scaled(T s) const
 {
     return QuaternionT<T>(x * s, y * s, z * s, w * s);
 }
 
 template <typename T>
-inline T QuaternionT<T>::Dot(const QuaternionT<T>& q) const
+inline T QuaternionT<T>::dot(const QuaternionT<T>& q) const
 {
     return x * q.x + y * q.y + z * q.z + w * q.w;
 }
 
 template <typename T>
-inline Matrix3<T> QuaternionT<T>::ToMatrix() const
+inline Matrix3<T> QuaternionT<T>::toMatrix() const
 {
     const T s = 2;
     T xs, ys, zs;
@@ -113,7 +114,7 @@ inline Matrix3<T> QuaternionT<T>::ToMatrix() const
 }
 
 template <typename T>
-inline Vector4<T> QuaternionT<T>::ToVector() const
+inline Vector4<T> QuaternionT<T>::toVector() const
 {
     return Vector4<T>(x, y, z, w);
 }
@@ -145,13 +146,13 @@ bool QuaternionT<T>::operator!=(const QuaternionT<T>& q) const
 // Compute the quaternion that rotates from a to b, avoiding numerical instability.
 // Taken from "The Shortest Arc Quaternion" by Stan Melax in "Game Programming Gems".
 template <typename T>
-inline QuaternionT<T> QuaternionT<T>::CreateFromVectors(const Vector3<T>& v0, const Vector3<T>& v1)
+inline QuaternionT<T> QuaternionT<T>::createFromVectors(const Vector3<T>& v0, const Vector3<T>& v1)
 {
     if (v0 == -v1)
-        return QuaternionT<T>::CreateFromAxisAngle(vec3(1, 0, 0), Pi);
+        return QuaternionT<T>::createFromAxisAngle(vec3(1, 0, 0), Pi);
     
-    Vector3<T> c = v0.Cross(v1);
-    T d = v0.Dot(v1);
+    Vector3<T> c = v0.cross(v1);
+    T d = v0.dot(v1);
     T s = std::sqrt((1 + d) * 2);
 
     QuaternionT<T> q;
@@ -163,7 +164,7 @@ inline QuaternionT<T> QuaternionT<T>::CreateFromVectors(const Vector3<T>& v0, co
 }
 
 template <typename T>
-inline QuaternionT<T>  QuaternionT<T>::CreateFromAxisAngle(const Vector3<T>& axis, float radians)
+inline QuaternionT<T>  QuaternionT<T>::createFromAxisAngle(const Vector3<T>& axis, float radians)
 {
     QuaternionT<T> q;
     q.w = std::cos(radians / 2);
@@ -175,13 +176,13 @@ inline QuaternionT<T>  QuaternionT<T>::CreateFromAxisAngle(const Vector3<T>& axi
 }
 
 template <typename T>
-inline void QuaternionT<T>::Normalize()
+inline void QuaternionT<T>::normalize()
 {
-    *this = Scaled(1 / std::sqrt(Dot(*this)));
+    *this = scaled(1 / std::sqrt(dot(*this)));
 }
 
 template <typename T>
-inline void QuaternionT<T>::Rotate(const QuaternionT<T>& q2)
+inline void QuaternionT<T>::rotate(const QuaternionT<T>& q2)
 {
     QuaternionT<T> q;
     QuaternionT<T>& q1 = *this;

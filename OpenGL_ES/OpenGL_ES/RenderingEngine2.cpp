@@ -153,9 +153,9 @@ void RenderingEngine2::initialize(int width, int height)
 	_program = buildProgram(SimpleVertexShader, SimpleFragmentShader);
 	glUseProgram(_program);
 	
-	mat4 projectionMatrix = mat4::Frustum(-1.6f, 1.6f, -2.4f, 2.4f, 5, 10);
+	mat4 projectionMatrix = mat4::frustum(-1.6f, 1.6f, -2.4f, 2.4f, 5, 10);
 	GLuint projectionUniform = glGetUniformLocation(_program, "Projection");
-	glUniformMatrix4fv(projectionUniform, 1, 0, projectionMatrix.Pointer());
+	glUniformMatrix4fv(projectionUniform, 1, 0, projectionMatrix.pointer());
 }
 
 void RenderingEngine2::render() const
@@ -170,12 +170,12 @@ void RenderingEngine2::render() const
 	glEnableVertexAttribArray(colorSlot);
 
 	// Configure Model-view matrix
-	mat4 rotation(_animation.current.ToMatrix());
-	mat4 translation = mat4::Translate(0, 0, -7);
+	mat4 rotation(_animation.current.toMatrix());
+	mat4 translation = mat4::translate(0, 0, -7);
 	mat4 modelviewMatrix = rotation * translation;
 
 	GLuint modelviewUniform = glGetUniformLocation(_program, "Modelview");
-	glUniformMatrix4fv(modelviewUniform, 1, 0, modelviewMatrix.Pointer());
+	glUniformMatrix4fv(modelviewUniform, 1, 0, modelviewMatrix.pointer());
 
 	// Draw cone
 	{
@@ -218,7 +218,7 @@ void RenderingEngine2::updateAnimation(float timeStep)
 	else 
 	{
 		float mu = _animation.elapsed / AnimationDuration;
-		_animation.current = _animation.start.Slerp(mu, _animation.end);
+		_animation.current = _animation.start.slerp(mu, _animation.end);
 	}
 }
 
@@ -255,7 +255,7 @@ void RenderingEngine2::onRotate(DeviceOrientation orientation)
 	
 	_animation.elapsed = 0;
 	_animation.start = _animation.current = _animation.end;
-	_animation.end = Quaternion::CreateFromVectors(vec3(0, 1, 0), direction);
+	_animation.end = Quaternion::createFromVectors(vec3(0, 1, 0), direction);
 }
 
 GLuint RenderingEngine2::buildShader(const char *source, GLenum shaderType) const

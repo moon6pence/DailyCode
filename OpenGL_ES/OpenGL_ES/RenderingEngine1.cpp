@@ -158,8 +158,8 @@ void RenderingEngine1::render() const
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glEnableClientState(GL_COLOR_ARRAY);
 	
-	mat4 rotation(_animation.current.ToMatrix());
-	glMultMatrixf(rotation.Pointer());
+	mat4 rotation(_animation.current.toMatrix());
+	glMultMatrixf(rotation.pointer());
 
 	// Draw cone
 	glVertexPointer(3, GL_FLOAT, sizeof(Vertex), &_cone[0].position.x);
@@ -190,7 +190,7 @@ void RenderingEngine1::updateAnimation(float timeStep)
 	else 
 	{
 		float mu = _animation.elapsed / AnimationDuration;
-		_animation.current = _animation.start.Slerp(mu, _animation.end);
+		_animation.current = _animation.start.slerp(mu, _animation.end);
 	}
 }
 
@@ -227,5 +227,5 @@ void RenderingEngine1::onRotate(DeviceOrientation orientation)
 
 	_animation.elapsed = 0;
 	_animation.start = _animation.current = _animation.end;
-	_animation.end = Quaternion::CreateFromVectors(vec3(0, 1, 0), direction);
+	_animation.end = Quaternion::createFromVectors(vec3(0, 1, 0), direction);
 }
