@@ -74,54 +74,44 @@ void RenderingEngine1::initialize(int width, int height)
 	
 	// Create cone
 	{
-		_cone.resize((coneSlices + 1) * 2);
-		
-		const float dtheta = TwoPi / coneSlices;
-		float theta = 0;
-		
-		for (vector<Vertex>::iterator vertex = _cone.begin(); vertex != _cone.end(); ++vertex)
+		Vertex vertex;
+
+		for (int index = 0; index <= coneSlices; index++)
 		{
+			float theta = index * (TwoPi / coneSlices);
 			float brightness = abs(sin(theta));
 			vec4 color(brightness, brightness, brightness, 1);
 			
-			vertex->position = vec3(0, 1, 0);
-			vertex->color = color;
-			++vertex;
-			
-			vertex->position.x = coneRadius * cos(theta);
-			vertex->position.y = 1 - coneHeight;
-			vertex->position.z = coneRadius * sin(theta);
-			vertex->color = color;
-			
-			theta += dtheta;
+			vertex.color = color;
+			vertex.position = vec3(0, 1, 0);
+			_cone.push_back(vertex);
+
+			vertex.color = color;
+			vertex.position.x = coneRadius * cos(theta);
+			vertex.position.y = 1 - coneHeight;
+			vertex.position.z = coneRadius * sin(theta);
+			_cone.push_back(vertex);
 		}
 	}
 	
 	// Create disk
 	{
-		_disk.resize(coneSlices + 2);
+		Vertex vertex;
+
+		vertex.color = vec4(0.75f, 0.75f, 0.75f, 1);
+		vertex.position = vec3(0, 1 - coneHeight, 0);
+		_disk.push_back(vertex);
 		
-		vector<Vertex>::iterator vertex = _disk.begin();
-		vertex->color = vec4(0.75f, 0.75f, 0.75f, 1);
-		vertex->position.x = 0;
-		vertex->position.y = 1 - coneHeight;
-		vertex->position.z = 0;
-		vertex++;
-		
-		const float dtheta = TwoPi / coneSlices;
-		float theta = 0;
-		
-		for ( ; vertex != _disk.end(); ++vertex)
-		{
-			vertex->color = vec4(0.75f, 0.75f, 0.75f, 1);
-			vertex->position.x = coneRadius * cos(theta);
-			vertex->position.y = 1 - coneHeight;
-			vertex->position.z = coneRadius * sin(theta);
+		for (int index = 0; index <= coneSlices; index++)
+        {
+			float theta = index * (TwoPi / coneSlices);
 			
-			theta += dtheta;
-		}
+			vertex.color = vec4(0.75f, 0.75f, 0.75f, 1);
+			vertex.position = vec3(coneRadius * cos(theta), 1 - coneHeight, coneRadius * sin(theta));
+			_disk.push_back(vertex);
+        }
 	}
-	
+    
 	// Create depth buffer
 	glGenRenderbuffersOES(1, &_depthBuffer);
 	glBindRenderbufferOES(GL_RENDERBUFFER_OES, _depthBuffer);
