@@ -1,13 +1,15 @@
 #include "ParametricSurface.hpp"
 
-class Cone : public ParametricSurface {
+class Cone : public ParametricSurface
+{
 public:
     Cone(float height, float radius) : m_height(height), m_radius(radius)
     {
         ParametricInterval interval = { ivec2(20, 20), vec2(TwoPi, 1) };
-        SetInterval(interval);
+        setInterval(interval);
     }
-    vec3 Evaluate(const vec2& domain) const
+	
+    vec3 evaluate(const vec2& domain) const
     {
         float u = domain.x, v = domain.y;
         float x = m_radius * (1 - v) * cos(u);
@@ -15,19 +17,22 @@ public:
         float z = m_radius * (1 - v) * -sin(u);
         return vec3(x, y, z);
     }
+	
 private:
     float m_height;
     float m_radius;
 };
 
-class Sphere : public ParametricSurface {
+class Sphere : public ParametricSurface
+{
 public:
     Sphere(float radius) : m_radius(radius)
     {
         ParametricInterval interval = { ivec2(20, 20), vec2(Pi, TwoPi) };
-        SetInterval(interval);
+        setInterval(interval);
     }
-    vec3 Evaluate(const vec2& domain) const
+	
+    vec3 evaluate(const vec2& domain) const
     {
         float u = domain.x, v = domain.y;
         float x = m_radius * sin(u) * cos(v);
@@ -35,20 +40,23 @@ public:
         float z = m_radius * -sin(u) * sin(v);
         return vec3(x, y, z);
     }
+	
 private:
     float m_radius;
 };
 
-class Torus : public ParametricSurface {
+class Torus : public ParametricSurface
+{
 public:
     Torus(float majorRadius, float minorRadius) :
-	m_majorRadius(majorRadius),
-	m_minorRadius(minorRadius)
+		m_majorRadius(majorRadius),
+		m_minorRadius(minorRadius)
     {
         ParametricInterval interval = { ivec2(20, 20), vec2(TwoPi, TwoPi) };
-        SetInterval(interval);
+        setInterval(interval);
     }
-    vec3 Evaluate(const vec2& domain) const
+	
+    vec3 evaluate(const vec2& domain) const
     {
         const float major = m_majorRadius;
         const float minor = m_minorRadius;
@@ -58,19 +66,22 @@ public:
         float z = minor * sin(v);
         return vec3(x, y, z);
     }
+	
 private:
     float m_majorRadius;
     float m_minorRadius;
 };
 
-class TrefoilKnot : public ParametricSurface {
+class TrefoilKnot : public ParametricSurface
+{
 public:
     TrefoilKnot(float scale) : m_scale(scale)
     {
         ParametricInterval interval = { ivec2(60, 15), vec2(TwoPi, TwoPi) };
-        SetInterval(interval);
+        setInterval(interval);
     }
-    vec3 Evaluate(const vec2& domain) const
+	
+    vec3 evaluate(const vec2& domain) const
     {
         const float a = 0.5f;
         const float b = 0.3f;
@@ -91,9 +102,9 @@ public:
 		(a + b * cos(1.5f * u)) * cos(u);
         dv.z = 1.5f * c * cos(1.5f * u);
         
-        vec3 q = dv.Normalized();
-        vec3 qvn = vec3(q.y, -q.x, 0).Normalized();
-        vec3 ww = q.Cross(qvn);
+        vec3 q = dv.normalized();
+        vec3 qvn = vec3(q.y, -q.x, 0).normalized();
+        vec3 ww = q.cross(qvn);
         
         vec3 range;
         range.x = x + d * (qvn.x * cos(v) + ww.x * sin(v));
@@ -105,14 +116,16 @@ private:
     float m_scale;
 };
 
-class MobiusStrip : public ParametricSurface {
+class MobiusStrip : public ParametricSurface
+{
 public:
     MobiusStrip(float scale) : m_scale(scale)
     {
         ParametricInterval interval = { ivec2(40, 20), vec2(TwoPi, TwoPi) };
-        SetInterval(interval);
+        setInterval(interval);
     }
-    vec3 Evaluate(const vec2& domain) const
+	
+    vec3 evaluate(const vec2& domain) const
     {
         float u = domain.x;
         float t = domain.y;
@@ -133,18 +146,21 @@ public:
         range.z = y;
         return range * m_scale;
     }
+	
 private:
     float m_scale;
 };
 
-class KleinBottle : public ParametricSurface {
+class KleinBottle : public ParametricSurface
+{
 public:
     KleinBottle(float scale) : m_scale(scale)
     {
         ParametricInterval interval = { ivec2(20, 20), vec2(TwoPi, TwoPi) };
-        SetInterval(interval);
+        setInterval(interval);
     }
-    vec3 Evaluate(const vec2& domain) const
+	
+    vec3 evaluate(const vec2& domain) const
     {
         float v = 1 - domain.x;
         float u = domain.y;
@@ -165,27 +181,32 @@ public:
         range.z = (-2 * (1 - cos(u) / 2)) * sin(v);
         return range * m_scale;
     }
+	
     bool InvertNormal(const vec2& domain) const
     {
         return domain.y > 3 * Pi / 2;
     }
+	
 private:
     float m_scale;
 };
 
-class Quad : public ParametricSurface {
+class Quad : public ParametricSurface
+{
 public:
     Quad(float width, float height) : m_size(width, height)
     {
-        ParametricInterval interval = { ivec2(2, 2), vec2(1, 1), vec2(1, 1) };
-        SetInterval(interval);
+        ParametricInterval interval = { ivec2(2, 2), vec2(1, 1) };
+        setInterval(interval);
     }
-    vec3 Evaluate(const vec2& domain) const
+	
+    vec3 evaluate(const vec2& domain) const
     {
         float x = (domain.x - 0.5) * m_size.x;
         float y = (domain.y - 0.5) * m_size.y;
         return vec3(x, -y, 0);
     }
+	
 private:
     vec2 m_size;
 };

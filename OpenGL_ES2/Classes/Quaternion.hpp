@@ -78,7 +78,7 @@ inline QuaternionT<T> QuaternionT<T>::rotated(const QuaternionT<T>& b) const
     q.x = w * b.x + x * b.w + y * b.z - z * b.y;
     q.y = w * b.y + y * b.w + z * b.x - x * b.z;
     q.z = w * b.z + z * b.w + x * b.y - y * b.x;
-    q.Normalize();
+    q.normalize();
     return q;
 }
 

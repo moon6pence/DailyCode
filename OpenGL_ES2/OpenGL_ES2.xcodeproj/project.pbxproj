@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0608EC7415D19FA90074FC5C /* ParametricSurface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0608EC7215D19FA90074FC5C /* ParametricSurface.cpp */; };
+		0608EC7715D1A73A0074FC5C /* ApplicationEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0608EC7515D1A73A0074FC5C /* ApplicationEngine.cpp */; };
+		0608EC8615D1B4E80074FC5C /* Simple.frag in Sources */ = {isa = PBXBuildFile; fileRef = 0608EC8415D1B4E80074FC5C /* Simple.frag */; };
+		0608EC8715D1B4E80074FC5C /* Simple.vert in Sources */ = {isa = PBXBuildFile; fileRef = 0608EC8515D1B4E80074FC5C /* Simple.vert */; };
 		1D3623260D0F684500981E51 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.mm */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -19,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0608EC6F15D19A550074FC5C /* Interfaces.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Interfaces.hpp; sourceTree = "<group>"; };
+		0608EC7115D19F460074FC5C /* ParametricSurface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParametricSurface.hpp; sourceTree = "<group>"; };
+		0608EC7215D19FA90074FC5C /* ParametricSurface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParametricSurface.cpp; sourceTree = "<group>"; };
+		0608EC7515D1A73A0074FC5C /* ApplicationEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ApplicationEngine.cpp; sourceTree = "<group>"; };
+		0608EC8415D1B4E80074FC5C /* Simple.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Simple.frag; path = Shaders/Simple.frag; sourceTree = "<group>"; };
+		0608EC8515D1B4E80074FC5C /* Simple.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Simple.vert; path = Shaders/Simple.vert; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -37,8 +47,6 @@
 		C9E7DAED1135806900429647 /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
 		C9E7DAF61135807F00429647 /* ParametricEquations.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ParametricEquations.hpp; sourceTree = "<group>"; };
 		C9E7DAF91135809A00429647 /* RenderingEngine.ES2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine.ES2.cpp; sourceTree = "<group>"; };
-		C9E7DB0A113580E600429647 /* Simple.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Simple.frag; path = Shaders/Simple.frag; sourceTree = "<group>"; };
-		C9E7DB11113580F200429647 /* Simple.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Simple.vert; path = Shaders/Simple.vert; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,13 @@
 				C9E7DAE81135805600429647 /* GLView.h */,
 				C9E7DAE91135805600429647 /* GLView.mm */,
 				C9E7DAEB1135805F00429647 /* Matrix.hpp */,
-				C9E7DAF61135807F00429647 /* ParametricEquations.hpp */,
 				C9E7DAEC1135806500429647 /* Quaternion.hpp */,
 				C9E7DAED1135806900429647 /* Vector.hpp */,
+				0608EC6F15D19A550074FC5C /* Interfaces.hpp */,
+				0608EC7115D19F460074FC5C /* ParametricSurface.hpp */,
+				0608EC7215D19FA90074FC5C /* ParametricSurface.cpp */,
+				C9E7DAF61135807F00429647 /* ParametricEquations.hpp */,
+				0608EC7515D1A73A0074FC5C /* ApplicationEngine.cpp */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -126,8 +138,8 @@
 		C9E7DB09113580CD00429647 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				C9E7DB0A113580E600429647 /* Simple.frag */,
-				C9E7DB11113580F200429647 /* Simple.vert */,
+				0608EC8415D1B4E80074FC5C /* Simple.frag */,
+				0608EC8515D1B4E80074FC5C /* Simple.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -192,6 +204,10 @@
 				1D3623260D0F684500981E51 /* AppDelegate.mm in Sources */,
 				C9E7DAEA1135805600429647 /* GLView.mm in Sources */,
 				C9E7DAFA1135809A00429647 /* RenderingEngine.ES2.cpp in Sources */,
+				0608EC7415D19FA90074FC5C /* ParametricSurface.cpp in Sources */,
+				0608EC7715D1A73A0074FC5C /* ApplicationEngine.cpp in Sources */,
+				0608EC8615D1B4E80074FC5C /* Simple.frag in Sources */,
+				0608EC8715D1B4E80074FC5C /* Simple.vert in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,26 +4,30 @@
 #include "Matrix.hpp"
 #include <iostream>
 
-namespace ES2 {
-
 #define STRINGIFY(A)  #A
+
 #include "../Shaders/Simple.vert"
 #include "../Shaders/Simple.frag"
 
-struct Drawable {
+struct Drawable
+{
     GLuint VertexBuffer;
     GLuint IndexBuffer;
     int IndexCount;
 };
 
-class RenderingEngine : public IRenderingEngine {
+class RenderingEngine : public IRenderingEngine
+{
 public:
     RenderingEngine();
-    void Initialize(const vector<ISurface*>& surfaces);
-    void Render(const vector<Visual>& visuals) const;
+	
+    void initialize(const vector<ISurface*>& surfaces);
+    void render(const vector<Visual>& visuals) const;
+	
 private:
-    GLuint BuildShader(const char* source, GLenum shaderType) const;
-    GLuint BuildProgram(const char* vShader, const char* fShader) const;
+    GLuint buildShader(const char* source, GLenum shaderType) const;
+    GLuint buildProgram(const char* vShader, const char* fShader) const;
+	
     vector<Drawable> m_drawables;
     GLuint m_colorRenderbuffer;
     GLint m_projectionUniform;
@@ -33,7 +37,7 @@ private:
     mat4 m_translation;
 };
 
-IRenderingEngine* CreateRenderingEngine()
+IRenderingEngine* IRenderingEngine::createRenderingEngine()
 {
     return new RenderingEngine();
 }
@@ -44,14 +48,14 @@ RenderingEngine::RenderingEngine()
     glBindRenderbuffer(GL_RENDERBUFFER, m_colorRenderbuffer);
 }
 
-void RenderingEngine::Initialize(const vector<ISurface*>& surfaces)
+void RenderingEngine::initialize(const vector<ISurface*>& surfaces)
 {
     vector<ISurface*>::const_iterator surface;
     for (surface = surfaces.begin(); surface != surfaces.end(); ++surface) {
         
         // Create the VBO for the vertices.
         vector<float> vertices;
-        (*surface)->GenerateVertices(vertices);
+        (*surface)->generateVertices(vertices);
         GLuint vertexBuffer;
         glGenBuffers(1, &vertexBuffer);
         glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
@@ -61,13 +65,13 @@ void RenderingEngine::Initialize(const vector<ISurface*>& surfaces)
                      GL_STATIC_DRAW);
         
         // Create a new VBO for the indices if needed.
-        int indexCount = (*surface)->GetLineIndexCount();
+        int indexCount = (*surface)->getLineIndexCount();
         GLuint indexBuffer;
         if (!m_drawables.empty() && indexCount == m_drawables[0].IndexCount) {
             indexBuffer = m_drawables[0].IndexBuffer;
         } else {
             vector<GLushort> indices(indexCount);
-            (*surface)->GenerateLineIndices(indices);
+            (*surface)->generateLineIndices(indices);
             glGenBuffers(1, &indexBuffer);
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
             glBufferData(GL_ELEMENT_ARRAY_BUFFER,
@@ -89,19 +93,19 @@ void RenderingEngine::Initialize(const vector<ISurface*>& surfaces)
     glBindRenderbuffer(GL_RENDERBUFFER, m_colorRenderbuffer);
     
     // Create the GLSL program.
-    GLuint simpleProgram = BuildProgram(SimpleVertexShader, SimpleFragmentShader);
+    GLuint simpleProgram = buildProgram(SimpleVertexShader, SimpleFragmentShader);
     glUseProgram(simpleProgram);
     m_positionSlot = glGetAttribLocation(simpleProgram, "Position");
     m_colorSlot = glGetAttribLocation(simpleProgram, "SourceColor");
     glEnableVertexAttribArray(m_positionSlot);
 
     // Set up some matrices.
-    m_translation = mat4::Translate(0, 0, -7);
+    m_translation = mat4::translate(0, 0, -7);
     m_projectionUniform = glGetUniformLocation(simpleProgram, "Projection");
     m_modelviewUniform = glGetUniformLocation(simpleProgram, "Modelview");
 }
 
-void RenderingEngine::Render(const vector<Visual>& visuals) const
+void RenderingEngine::render(const vector<Visual>& visuals) const
 {
     glClearColor(0.5f, 0.5f, 0.5f, 1);
     glClear(GL_COLOR_BUFFER_BIT);
@@ -110,22 +114,22 @@ void RenderingEngine::Render(const vector<Visual>& visuals) const
     for (int visualIndex = 0; visual != visuals.end(); ++visual, ++visualIndex) {
 
         // Set the viewport transform.
-        ivec2 size = visual->ViewportSize;
-        ivec2 lowerLeft = visual->LowerLeft;
+        ivec2 size = visual->viewportSize;
+        ivec2 lowerLeft = visual->lowerLeft;
         glViewport(lowerLeft.x, lowerLeft.y, size.x, size.y);
 
         // Set the model-view transform.
-        mat4 rotation = visual->Orientation.ToMatrix();
+        mat4 rotation = visual->orientation.toMatrix();
         mat4 modelview = rotation * m_translation;
-        glUniformMatrix4fv(m_modelviewUniform, 1, 0, modelview.Pointer());
+        glUniformMatrix4fv(m_modelviewUniform, 1, 0, modelview.pointer());
 
         // Set the projection transform.
         float h = 4.0f * size.y / size.x;
-        mat4 projectionMatrix = mat4::Frustum(-2, 2, -h / 2, h / 2, 5, 10);
-        glUniformMatrix4fv(m_projectionUniform, 1, 0, projectionMatrix.Pointer());
+        mat4 projectionMatrix = mat4::frustum(-2, 2, -h / 2, h / 2, 5, 10);
+        glUniformMatrix4fv(m_projectionUniform, 1, 0, projectionMatrix.pointer());
         
         // Set the color.
-        vec3 color = visual->Color;
+        vec3 color = visual->color;
         glVertexAttrib4f(m_colorSlot, color.x, color.y, color.z, 1);
         
         // Draw the wireframe.
@@ -138,7 +142,7 @@ void RenderingEngine::Render(const vector<Visual>& visuals) const
     }
 }
 
-GLuint RenderingEngine::BuildShader(const char* source, GLenum shaderType) const
+GLuint RenderingEngine::buildShader(const char* source, GLenum shaderType) const
 {
     GLuint shaderHandle = glCreateShader(shaderType);
     glShaderSource(shaderHandle, 1, &source, 0);
@@ -157,11 +161,11 @@ GLuint RenderingEngine::BuildShader(const char* source, GLenum shaderType) const
     return shaderHandle;
 }
 
-GLuint RenderingEngine::BuildProgram(const char* vertexShaderSource,
+GLuint RenderingEngine::buildProgram(const char* vertexShaderSource,
                                       const char* fragmentShaderSource) const
 {
-    GLuint vertexShader = BuildShader(vertexShaderSource, GL_VERTEX_SHADER);
-    GLuint fragmentShader = BuildShader(fragmentShaderSource, GL_FRAGMENT_SHADER);
+    GLuint vertexShader = buildShader(vertexShaderSource, GL_VERTEX_SHADER);
+    GLuint fragmentShader = buildShader(fragmentShaderSource, GL_FRAGMENT_SHADER);
     
     GLuint programHandle = glCreateProgram();
     glAttachShader(programHandle, vertexShader);
@@ -178,6 +182,4 @@ GLuint RenderingEngine::BuildProgram(const char* vertexShaderSource,
     }
     
     return programHandle;
-}
-    
 }

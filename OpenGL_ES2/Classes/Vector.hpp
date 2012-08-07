@@ -104,7 +104,7 @@ struct Vector3
     Vector3 normalized() const
     {
         Vector3 v = *this;
-        v.Normalize();
+        v.normalize();
         return v;
     }
     

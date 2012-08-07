@@ -20,26 +20,13 @@ const bool ForceES1 = false;
         EAGLRenderingAPI api = kEAGLRenderingAPIOpenGLES2;
         m_context = [[EAGLContext alloc] initWithAPI:api];
         
-        if (!m_context || ForceES1) {
-            api = kEAGLRenderingAPIOpenGLES1;
-            m_context = [[EAGLContext alloc] initWithAPI:api];
-        }
-        
         if (!m_context || ![EAGLContext setCurrentContext:m_context]) {
             [self release];
             return nil;
         }
         
-
-        if (api == kEAGLRenderingAPIOpenGLES1) {
-            NSLog(@"Using OpenGL ES 1.1");
-            m_renderingEngine = ES1::CreateRenderingEngine();
-        } else {
-            NSLog(@"Using OpenGL ES 2.0");
-            m_renderingEngine = ES2::CreateRenderingEngine();
-        }
-
-        m_applicationEngine = CreateApplicationEngine(m_renderingEngine);
+        m_renderingEngine = IRenderingEngine::createRenderingEngine();
+        m_applicationEngine = IApplicationEngine::createApplicationEngine(m_renderingEngine);
 
         [m_context
             renderbufferStorage:GL_RENDERBUFFER
@@ -47,7 +34,7 @@ const bool ForceES1 = false;
                 
         int width = CGRectGetWidth(frame);
         int height = CGRectGetHeight(frame);
-        m_applicationEngine->Initialize(width, height);
+        m_applicationEngine->initialize(width, height);
         
         [self drawView: nil];
         m_timestamp = CACurrentMediaTime();
@@ -67,10 +54,10 @@ const bool ForceES1 = false;
     if (displayLink != nil) {
         float elapsedSeconds = displayLink.timestamp - m_timestamp;
         m_timestamp = displayLink.timestamp;
-        m_applicationEngine->UpdateAnimation(elapsedSeconds);
+        m_applicationEngine->updateAnimation(elapsedSeconds);
     }
     
-    m_applicationEngine->Render();
+    m_applicationEngine->render();
     [m_context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
@@ -78,14 +65,14 @@ const bool ForceES1 = false;
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self];
-    m_applicationEngine->OnFingerDown(ivec2(location.x, location.y));
+    m_applicationEngine->onMouseDown(ivec2(location.x, location.y));
 }
 
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent*) event
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self];
-    m_applicationEngine->OnFingerUp(ivec2(location.x, location.y));
+    m_applicationEngine->onMouseUp(ivec2(location.x, location.y));
 }
 
 - (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
@@ -93,8 +80,8 @@ const bool ForceES1 = false;
     UITouch* touch = [touches anyObject];
     CGPoint previous  = [touch previousLocationInView: self];
     CGPoint current = [touch locationInView: self];
-    m_applicationEngine->OnFingerMove(ivec2(previous.x, previous.y),
-                                      ivec2(current.x, current.y));
+    m_applicationEngine->onMouseMove(ivec2(previous.x, previous.y),
+                                     ivec2(current.x, current.y));
 }
 
 @end
