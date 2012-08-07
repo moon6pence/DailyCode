@@ -20,11 +20,9 @@ enum DeviceOrientation
 	DeviceOrientationFaceDown, 
 };
 
-struct IRenderingEngine *createRenderer1();
-struct IRenderingEngine *createRenderer2();
-
 struct IRenderingEngine
 {
+	static IRenderingEngine *createRenderer();
 	virtual ~IRenderingEngine() { };
 	
 	virtual void initialize(int width, int height) = 0;

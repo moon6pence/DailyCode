@@ -15,8 +15,6 @@
 
 #import "IRenderingEngine.h"
 
-const bool ForceES1 = NO;
-
 @interface GLView () {
 	EAGLContext *_context;
 	IRenderingEngine *_renderingEngine;
@@ -45,25 +43,12 @@ const bool ForceES1 = NO;
 		EAGLRenderingAPI api = kEAGLRenderingAPIOpenGLES2;
 		_context = [[EAGLContext alloc] initWithAPI:api];
 		
-		// Try OpenGL ES 1.1
-		if (nil == _context || ForceES1) {
-			api = kEAGLRenderingAPIOpenGLES1;
-			_context = [[EAGLContext alloc] initWithAPI:api];
-		}
-		
 		if (nil == _context || false == [EAGLContext setCurrentContext:_context]) {
 			[self release];
 			return nil;
 		}
 
-		if (api == kEAGLRenderingAPIOpenGLES2) {
-			NSLog(@"Using OpenGL ES 2.0");
-			_renderingEngine = createRenderer2();
-		}
-		else {
-			NSLog(@"Using OpenGL ES 1.1");
-			_renderingEngine = createRenderer1();
-		}
+		_renderingEngine = IRenderingEngine::createRenderer();
 		
 		[_context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:eaglLayer];
 		

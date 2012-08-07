@@ -64,7 +64,7 @@ private:
 	GLuint _depthBuffer;
 };
 
-IRenderingEngine *createRenderer2()
+IRenderingEngine *IRenderingEngine::createRenderer()
 {
 	return new RenderingEngine2();
 }

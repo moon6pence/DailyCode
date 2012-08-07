@@ -19,7 +19,6 @@
 		06DDB28B15BC56CA00EC8690 /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB28A15BC56CA00EC8690 /* GLView.mm */; };
 		06DDB28E15BC587A00EC8690 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DDB28D15BC587A00EC8690 /* QuartzCore.framework */; };
 		06DDB29015BC587E00EC8690 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DDB28F15BC587E00EC8690 /* OpenGLES.framework */; };
-		06DDB29215BC5F6100EC8690 /* RenderingEngine1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB29115BC5F6000EC8690 /* RenderingEngine1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +43,6 @@
 		06DDB28C15BC57C300EC8690 /* IRenderingEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRenderingEngine.h; sourceTree = "<group>"; };
 		06DDB28D15BC587A00EC8690 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06DDB28F15BC587E00EC8690 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		06DDB29115BC5F6000EC8690 /* RenderingEngine1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine1.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 				06DDB28915BC56CA00EC8690 /* GLView.h */,
 				06DDB28A15BC56CA00EC8690 /* GLView.mm */,
 				06DDB28C15BC57C300EC8690 /* IRenderingEngine.h */,
-				06DDB29115BC5F6000EC8690 /* RenderingEngine1.cpp */,
 				06D82BC915BDB37800DC3FF2 /* RenderingEngine2.cpp */,
 				06DDB27315BC569C00EC8690 /* Supporting Files */,
 				06D82BC415BDB1BC00DC3FF2 /* Simple.vert */,
@@ -188,7 +185,6 @@
 				06DDB27915BC569C00EC8690 /* main.m in Sources */,
 				06DDB27D15BC569C00EC8690 /* AppDelegate.m in Sources */,
 				06DDB28B15BC56CA00EC8690 /* GLView.mm in Sources */,
-				06DDB29215BC5F6100EC8690 /* RenderingEngine1.cpp in Sources */,
 				06D82BC515BDB1BC00DC3FF2 /* Simple.vert in Sources */,
 				06D82BC815BDB1CE00DC3FF2 /* Simple.frag in Sources */,
 				06D82BCA15BDB37800DC3FF2 /* RenderingEngine2.cpp in Sources */,
