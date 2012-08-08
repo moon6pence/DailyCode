@@ -106,7 +106,7 @@ void RenderingEngine::initialize(const vector<ISurface*>& surfaces)
 
 void RenderingEngine::render(const vector<Visual>& visuals) const
 {
-    glClearColor(0.5f, 0.5f, 0.5f, 1);
+    glClearColor(0.0f, 0.0f, 0.0f, 1);
     glClear(GL_COLOR_BUFFER_BIT);
         
     vector<Visual>::const_iterator visual = visuals.begin();
