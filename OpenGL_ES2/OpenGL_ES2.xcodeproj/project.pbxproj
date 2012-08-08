@@ -45,7 +45,7 @@
 		C9E7DAEB1135805F00429647 /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
 		C9E7DAEC1135806500429647 /* Quaternion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Quaternion.hpp; sourceTree = "<group>"; };
 		C9E7DAED1135806900429647 /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
-		C9E7DAF61135807F00429647 /* ParametricEquations.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ParametricEquations.hpp; sourceTree = "<group>"; };
+		C9E7DAF61135807F00429647 /* ParametricEquations.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; lineEnding = 0; path = ParametricEquations.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		C9E7DAF91135809A00429647 /* RenderingEngine.ES2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine.ES2.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,17 +70,17 @@
 			children = (
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.mm */,
-				C9E7DAF91135809A00429647 /* RenderingEngine.ES2.cpp */,
 				C9E7DAE81135805600429647 /* GLView.h */,
 				C9E7DAE91135805600429647 /* GLView.mm */,
-				C9E7DAEB1135805F00429647 /* Matrix.hpp */,
-				C9E7DAEC1135806500429647 /* Quaternion.hpp */,
-				C9E7DAED1135806900429647 /* Vector.hpp */,
 				0608EC6F15D19A550074FC5C /* Interfaces.hpp */,
+				0608EC7515D1A73A0074FC5C /* ApplicationEngine.cpp */,
+				C9E7DAF91135809A00429647 /* RenderingEngine.ES2.cpp */,
 				0608EC7115D19F460074FC5C /* ParametricSurface.hpp */,
 				0608EC7215D19FA90074FC5C /* ParametricSurface.cpp */,
 				C9E7DAF61135807F00429647 /* ParametricEquations.hpp */,
-				0608EC7515D1A73A0074FC5C /* ApplicationEngine.cpp */,
+				C9E7DAEB1135805F00429647 /* Matrix.hpp */,
+				C9E7DAEC1135806500429647 /* Quaternion.hpp */,
+				C9E7DAED1135806900429647 /* Vector.hpp */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

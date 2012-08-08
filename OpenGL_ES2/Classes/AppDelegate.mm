@@ -10,17 +10,16 @@
 
 @implementation AppDelegate
 
-- (void) applicationDidFinishLaunching: (UIApplication*) application
+- (void)applicationDidFinishLaunching:(UIApplication*)application
 {
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     
-    _window = [[UIWindow alloc] initWithFrame: screenBounds];
-    _view = [[GLView alloc] initWithFrame: screenBounds];
+    _window = [[UIWindow alloc] initWithFrame:screenBounds];
+    _view = [[GLView alloc] initWithFrame:screenBounds];
     
-    [_window addSubview: _view];
+    [_window addSubview:_view];
     [_window makeKeyAndVisible];
 }
-
 
 - (void)dealloc
 {
@@ -29,6 +28,5 @@
 	
     [super dealloc];
 }
-
 
 @end

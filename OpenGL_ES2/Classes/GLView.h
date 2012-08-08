@@ -1,15 +1,15 @@
-#import "Interfaces.hpp"
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#import "Interfaces.hpp"
+
 @interface GLView : UIView {
-@private
-    IApplicationEngine* m_applicationEngine;
-    IRenderingEngine* m_renderingEngine;
-    EAGLContext* m_context;
-    float m_timestamp;
+    IApplicationEngine *_applicationEngine;
+    IRenderingEngine *_renderingEngine;
+    EAGLContext *_context;
+    float _timestamp;
 }
 
-- (void) drawView: (CADisplayLink*) displayLink;
+- (void)drawView:(CADisplayLink*)displayLink;
 
 @end

@@ -79,7 +79,7 @@ void ApplicationEngine::initialize(int width, int height)
 void ApplicationEngine::render() const
 {
 	Visual visual;
-	visual.color = _spinning ? vec3(1, 1, 1) : vec3(0, 1, 1);
+	visual.color = _spinning ? vec3(0.8f, 0.8f, 1.0f) : vec3(1.0f, 1.0f, 1.0f);
 	visual.lowerLeft = ivec2(0, 48);
 	visual.viewportSize = ivec2(320, 432);
 	visual.orientation = _orientation;
